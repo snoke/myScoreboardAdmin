@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand text-nowrap navbar-dark  bg-dark shadow">
+  
+
+    <ul class="navbar-nav w-100">
+      <li class="nav-item  p-4">
+        <a class="navbar-brand" href="{{path('index')}}" >{{appname}}</a>
+		</a>
+      </li>
+      <li class="nav-item  p-4 {% if app.request.attributes.get('_route')=="scoreboard" %}active {%endif%} ">
+        <a class="nav-link  " href="{{path('index')}}">
+		<i class="fa fa-lg fa-list-ol mr-2"></i> scoreboard 
+		</a>
+      </li>
+	  
+
+{% if is_granted('ROLE_ADMIN') %} 
+
+
+      <li class="nav-item p-4 dropdown {% if app.request.attributes.get('_route')=="edit_entity" or app.request.attributes.get('_route')=="add_entity" %}active {%endif%} ">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class=" fa fa-lg fa-edit  mr-2"></i> entities 
+        </a>
+        <div class="dropdown-menu shadow " aria-labelledby="navbarDropdown">
+		 {% for name,class in entities %}
+			<a class="dropdown-item text-center p-3 {% if entity is defined and entity==name%}active{%endif%}" href="{{path('add_entity',{entity:name})}}">{{name}}</a>
+		 {% endfor %}
+        </div>
+      </li>
+	  
+	  
+	   {% endif %}
+	   
+	   
+      <li class="nav-item w-100 float-right">
+		<div class="p-4 float-right">
+        <form class="" action="{{path('search_post')}}" method="POST">
+		<input type="text" id="form_search" name="form[search]" required="required"  class="small pb-1" placeholder="search">
+		
+	  <button class="btn-sm btn btn-outline-secondary " type="submit">  Search <i class="fa fa-sm fa-search"></i></button>
+    </form>
+  </div>
+      </li>
+	   
+      <li class="nav-item float-right pr-2">
+		<div class="pt-4 float-right">
+		<a class="btn-sm btn btn-outline-primary text-primary " href="{% if is_granted('ROLE_USER') %}{{path("app_logout")}}{% else %}{{path("app_login")}}{% endif %}"> {% if is_granted('ROLE_USER') %}Logout{% else %}Login{% endif %} <i class="fas fa-sign-in-alt"></i>
+</a>
+  </div>
+      </li>
+    </ul>
+	
+</nav>
+<div style="height:100px;">
+</div>
