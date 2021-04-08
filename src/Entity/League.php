@@ -160,7 +160,7 @@ class League extends Entity
 				$gameDay = $matchesAmount;
 			}
 		}
-		$return ($gameDay===null)?1:$gameDay+1;
+		return ($gameDay===null)?1:$gameDay+1;
 	}
     /**
      * @return bool
