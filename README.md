@@ -1,5 +1,5 @@
 # myScoreboardAdmin
-Symfony 6/PHP League Scoreboard Administration Tool
+Symfony 6 League Scoardboard Administration Tool
 
 Todo: fix bugged responive (mobile) design
 
