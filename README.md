@@ -1,7 +1,7 @@
 # myScoreboardAdmin
 Symfony 6 League Scoardboard Administration Tool
 
-Todo: fix bugged responive (mobile) design
+Todo: fix bugged responsive width for mobile displays
 
 Live Demo: <a href="https://myScoreboardAdmin.stefan-sander.online" target="_blank">https://myScoreboardAdmin.stefan-sander.online</a>
 
