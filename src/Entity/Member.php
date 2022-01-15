@@ -20,8 +20,8 @@ class Member extends Entity
      * @ORM\Column(type="integer")
      */
     #[ORM\Id]
-     #[ORM\GeneratedValue()]
-     #[ORM\Column(type:"integer")]
+    #[ORM\GeneratedValue()]
+    #[ORM\Column(type:"integer")]
     private $id;
 
     /**
@@ -29,8 +29,8 @@ class Member extends Entity
      * @ORM\ManyToOne(targetEntity="App\Entity\Team", inversedBy="members")
      * @ORM\JoinColumn(nullable=false)
      */
- #[ORM\ManyToOne(targetEntity:"App\Entity\Team", inversedBy:"members")]
-     #[ORM\JoinColumn(nullable:false)]
+    #[ORM\ManyToOne(targetEntity:"App\Entity\Team", inversedBy:"members")]
+    #[ORM\JoinColumn(nullable:false)]
     private $team;
 
 
