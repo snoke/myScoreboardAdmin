@@ -3,7 +3,7 @@ Symfony 6 League Scoardboard Administration Tool
 
 Todo: 
 * fix bugged responsive width and collapsing navbar for mobile displays
-* fix duplicate Annotations due to symfony 6 update changes with annotation reader
+* fix duplicate ORM Annotations needed due to Symfony 6 update and changes with annotation reader
 
 Live Demo: <a href="https://myScoreboardAdmin.stefan-sander.online" target="_blank">https://myScoreboardAdmin.stefan-sander.online</a>
 
